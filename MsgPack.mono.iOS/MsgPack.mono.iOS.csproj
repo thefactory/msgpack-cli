@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88644B60-C039-40EC-8D58-67AD2454ED57}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MsgPack.mono.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>MsgPack.mono.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\src\MsgPack\BigEndianBinary.cs">
+      <Link>BigEndianBinary.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Binary.cs">
+      <Link>Binary.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\CollectionDebuggerProxy`1.cs">
+      <Link>CollectionDebuggerProxy`1.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\CollectionOperation.cs">
+      <Link>CollectionOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\DictionaryDebuggerProxy`2.cs">
+      <Link>DictionaryDebuggerProxy`2.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\EnumerableStream.cs">
+      <Link>EnumerableStream.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Float32Bits.cs">
+      <Link>Float32Bits.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Float64Bits.cs">
+      <Link>Float64Bits.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\GlobalSuppressions.cs">
+      <Link>GlobalSuppressions.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\InvalidMessagePackStreamException.cs">
+      <Link>InvalidMessagePackStreamException.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\IPackable.cs">
+      <Link>IPackable.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\ItemsUnpacker.cs">
+      <Link>ItemsUnpacker.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\ItemsUnpacker.Skipping.cs">
+      <Link>ItemsUnpacker.Skipping.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\ItemsUnpacker.Unpacking.cs">
+      <Link>ItemsUnpacker.Unpacking.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\IUnpackable.cs">
+      <Link>IUnpackable.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessageNotSupportedException.cs">
+      <Link>MessageNotSupportedException.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackCode.cs">
+      <Link>MessagePackCode.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackConvert.cs">
+      <Link>MessagePackConvert.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObject.cs">
+      <Link>MessagePackObject.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObject.Utilities.cs">
+      <Link>MessagePackObject.Utilities.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObjectDictionary.cs">
+      <Link>MessagePackObjectDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObjectDictionary.Enumerator.cs">
+      <Link>MessagePackObjectDictionary.Enumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObjectDictionary.KeySet.cs">
+      <Link>MessagePackObjectDictionary.KeySet.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObjectDictionary.KeySet.Enumerator.cs">
+      <Link>MessagePackObjectDictionary.KeySet.Enumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObjectDictionary.ValueCollection.cs">
+      <Link>MessagePackObjectDictionary.ValueCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObjectDictionary.ValueCollection.Enumerator.cs">
+      <Link>MessagePackObjectDictionary.ValueCollection.Enumerator.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackObjectEqualityComparer.cs">
+      <Link>MessagePackObjectEqualityComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackString.cs">
+      <Link>MessagePackString.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\MessageTypeException.cs">
+      <Link>MessageTypeException.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Packer.cs">
+      <Link>Packer.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Packer.Nullable.cs">
+      <Link>Packer.Nullable.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\PackingOptions.cs">
+      <Link>PackingOptions.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\ReflectionAbstractions.cs">
+      <Link>ReflectionAbstractions.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\SetOperation.cs">
+      <Link>SetOperation.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\StreamPacker.cs">
+      <Link>StreamPacker.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\SubtreeUnpacker.cs">
+      <Link>SubtreeUnpacker.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\SubtreeUnpacker.Unpacking.cs">
+      <Link>SubtreeUnpacker.Unpacking.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\TupleItems.cs">
+      <Link>TupleItems.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\UnassignedMessageTypeException.cs">
+      <Link>UnassignedMessageTypeException.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Unpacker.cs">
+      <Link>Unpacker.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Unpacker.Unpacking.cs">
+      <Link>Unpacker.Unpacking.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\UnpackException.cs">
+      <Link>UnpackException.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Unpacking.cs">
+      <Link>Unpacking.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Unpacking.Numerics.cs">
+      <Link>Unpacking.Numerics.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Unpacking.Others.cs">
+      <Link>Unpacking.Others.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Unpacking.Streaming.cs">
+      <Link>Unpacking.Streaming.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Unpacking.String.cs">
+      <Link>Unpacking.String.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\UnpackingMode.cs">
+      <Link>UnpackingMode.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\UnpackingResult.cs">
+      <Link>UnpackingResult.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\UnpackingStream.cs">
+      <Link>UnpackingStream.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\UnpackingStreamReader.cs">
+      <Link>UnpackingStreamReader.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\UnsafeNativeMethods.cs">
+      <Link>UnsafeNativeMethods.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\Validation.cs">
+      <Link>Validation.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\MsgPack.snk">
+      <Link>MsgPack.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\src\MsgPack\remarks.xml">
+      <Link>remarks.xml</Link>
+    </Content>
+  </ItemGroup>
+</Project>
