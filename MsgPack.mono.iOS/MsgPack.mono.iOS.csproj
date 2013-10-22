@@ -201,6 +201,12 @@
     <Compile Include="..\src\MsgPack\Validation.cs">
       <Link>Validation.cs</Link>
     </Compile>
+    <Compile Include="..\src\MsgPack\MessagePackExtendedTypeObject.cs">
+      <Link>MessagePackExtendedTypeObject.cs</Link>
+    </Compile>
+    <Compile Include="..\src\MsgPack\PackerCompatibilityOptions.cs">
+      <Link>PackerCompatibilityOptions.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\src\MsgPack.snk">
