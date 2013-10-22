@@ -238,18 +238,7 @@ namespace MsgPack.Serialization
 			}
 		}
 
-		[Test]
-		public void TestUnpackTo_StreamContentIsEmpty()
-		{
-			var target = CreateTarget<int[]>();
-			using ( var buffer = new MemoryStream( new byte[ 0 ] ) )
-			using ( var unpacker = Unpacker.Create( buffer ) )
-			{
-				unpacker.Read();
-				var collection = new int[ 1 ];
-				Assert.Throws<SerializationException>( () => target.UnpackTo( unpacker, collection ) );
-			}
-		}
+		// TestUnpackTo_StreamContentIsEmpty has been no effect.
 
 		[Test]
 		public void TestUnpackTo_StreamContainsNull()
@@ -324,18 +313,9 @@ namespace MsgPack.Serialization
 			}
 		}
 
-		[Test]
-		public void TestIMessagePackSerializerUnpackTo_StreamContentIsEmpty()
-		{
-			IMessagePackSerializer target = CreateTarget<int[]>();
-			using ( var buffer = new MemoryStream( new byte[ 0 ] ) )
-			using ( var unpacker = Unpacker.Create( buffer ) )
-			{
-				unpacker.Read();
-				var collection = new int[ 1 ];
-				Assert.Throws<SerializationException>( () => target.UnpackTo( unpacker, collection ) );
-			}
-		}
+
+		// TestIMessagePackSerializerUnpackTo_StreamContentIsEmpty
+		// It has been no effect.
 
 		[Test]
 		public void TestIMessagePackSerializerUnpackTo_StreamContainsNull()
@@ -519,7 +499,7 @@ namespace MsgPack.Serialization
 					( u, o ) =>
 					{
 						Assert.That( u.Read(), Is.True );
-						Assert.That( u.Data.Value == o, "{0} == {1}", u.Data.Value, o );
+						Assert.That( u.LastReadData == o, "{0} == {1}", u.LastReadData, o );
 					};
 
 				assertion( unpacker, 3 );
